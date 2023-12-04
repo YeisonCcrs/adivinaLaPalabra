@@ -20,6 +20,7 @@ class Autoadivina:
     self.texto = self.elegirPalabra()
     self.numLetras = len(self.texto)
     self.definicion = self.obtenerDefinicionPalabra(self.texto)
+    self.pistas = 3
 
     #Redefinimos los strings para que puedan ser insertados como argumentos en NFA
     estados_finales = set(self.defStates(self.texto).replace("'", "").split(", "))
@@ -34,6 +35,7 @@ class Autoadivina:
     self.texto = self.elegirPalabra()
     self.numLetras = len(self.texto)
     self.definicion = self.obtenerDefinicionPalabra(self.texto)
+    self.pistas=3
     #Redefinimos los strings para que puedan ser insertados como argumentos en NFA
     estados_finales = set(self.defStates(self.texto).replace("'", "").split(", "))
     estados = set(self.defStates(self.texto).replace("'", "").split(", "))
